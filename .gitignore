@@ -1,0 +1,34 @@
+# Docker
+.env
+*.log
+data/
+logs/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 機密情報
+config/secrets/
+*.key
+*.pem
