@@ -1,23 +1,31 @@
-# Open WebUI テスト環境
+# Open WebUI Test Environment
 
-## 概要
-Open WebUIのローカルテスト環境です。
+This is a test environment for Open WebUI.
 
-## セットアップ
+## Setup
+
+1. Copy the environment file and configure your API keys:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` file with your OpenAI API key or Ollama configuration.
+
+3. Start the service:
+   ```bash
+   docker-compose up -d
+   ```
+
+4. Access Open WebUI at: http://localhost:3000
+
+## Stop the service
+
 ```bash
-# リポジトリをクローン
-git clone <your-repo-url>
-cd openwebui-test
-
-# ブランチを作成
-git checkout -b feature/openwebui-setup
-
-# Docker Composeで起動
-docker-compose up -d
+docker-compose down
 ```
 
-## ブランチ戦略
-- `main`: 安定版
-- `develop`: 開発版
-- `feature/*`: 機能開発用
-- `test/*`: テスト用
+## View logs
+
+```bash
+docker-compose logs -f open-webui
+```
